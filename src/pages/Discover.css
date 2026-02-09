@@ -1,0 +1,908 @@
+/* Discover Page Styles */
+
+.discover {
+  width: 100%;
+  overflow-x: hidden;
+  background: white;
+}
+
+/* Hero Section */
+.discover-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-hero__video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.discover-hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.discover-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(254, 0, 221, 0.3) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.discover-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.discover-hero__heading {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* About Us Section */
+.discover-about {
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fafafa 50%,
+    #ffffff 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(254, 0, 221, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.discover-about::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(254, 0, 221, 0.03) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.discover-about__content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.discover-about__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.discover-about__line {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(254, 0, 221, 0.5) 50%, transparent 100%);
+}
+
+.discover-about__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #fe00dd 0%, #FF1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1px;
+}
+
+.discover-about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.discover-about__text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  text-align: justify;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.discover-about__intro {
+  font-size: 1.1rem !important;
+  color: #1a1a1a !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(254, 0, 221, 0.02) 0%,
+    rgba(255, 215, 0, 0.02) 100%
+  );
+  border-radius: 8px;
+  border-left: 4px solid;
+  border-image: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%) 1;
+}
+
+.discover-about__intro strong {
+  background: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.discover-about__closing {
+  font-style: italic;
+  color: #666 !important;
+  border-left: 4px solid;
+  border-image: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%) 1;
+  padding-left: 2rem;
+}
+
+/* Director's Message Section */
+.discover-director {
+  padding: 5rem 2rem;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(254, 0, 221, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-director::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(254, 0, 221, 0.3) 50%, transparent 100%);
+}
+
+.discover-director__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.discover-director__heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #fe00dd 0%, #FF1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1.5px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Two Column Layout */
+.discover-director__content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Left Column - Portrait with Premium Frame */
+.discover-director__portrait {
+  position: relative;
+  width: 100%;
+}
+
+.discover-director__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  background: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 20px 60px rgba(254, 0, 221, 0.25),
+    0 8px 20px rgba(254, 0, 221, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-director__image {
+  width: 98%;
+  height: 105%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  filter: brightness(1.02) contrast(1.05);
+}
+
+.discover-director__image-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+}
+}
+
+/* Right Column - Message & Signature */
+.discover-director__message {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-top: 0;
+}
+
+.discover-director__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.discover-director__intro {
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  line-height: 1.75;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin: 0;
+  padding: 1.3rem 1.5rem;
+  background: linear-gradient(135deg, rgba(254, 0, 221, 0.04) 0%, rgba(255, 215, 0, 0.04) 100%);
+  border-radius: 12px;
+  border-left: 3px solid;
+  border-image: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%) 1;
+}
+
+.discover-director__intro strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.discover-director__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.discover-director__body p {
+  font-size: 0.93rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+}
+
+.discover-director__closing {
+  font-style: italic;
+  color: #666 !important;
+  padding-left: 1.2rem;
+  border-left: 3px solid;
+  border-image: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%) 1;
+  margin-top: 0.5rem !important;
+  font-size: 0.95rem !important;
+}
+
+/* Signature with Animation */
+.discover-director__signature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.discover-director__signature-container {
+  width: 100%;
+  max-width: 250px;
+  position: relative;
+  height: auto;
+}
+
+.discover-director__signature-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  filter: brightness(0) saturate(0);
+  opacity: 0.85;
+}
+
+.discover-director__signature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.discover-director__signature-pen {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-25deg);
+  pointer-events: none;
+  z-index: 10;
+  filter: drop-shadow(0 2px 8px rgba(254, 0, 221, 0.4));
+}
+
+.discover-director__signature-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .discover-director__content {
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .discover-director {
+    padding: 4rem 2rem;
+  }
+
+  .discover-director__header {
+    margin-bottom: 2.5rem;
+  }
+
+  .discover-director__content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .discover-director__portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .discover-director__signature {
+    align-items: center;
+    text-align: center;
+  }
+
+  .discover-director__signature-container {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .discover-director {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .discover-director__header {
+    margin-bottom: 2rem;
+  }
+
+  .discover-director__image-wrapper {
+    padding: 0.8rem;
+  }
+
+  .discover-director__intro {
+    padding: 1.1rem 1.3rem;
+    font-size: 0.92rem;
+  }
+
+  .discover-director__body p {
+    font-size: 0.9rem;
+  }
+
+  .discover-director__signature-container {
+    max-width: 200px;
+  }
+}
+
+/* Our Approach - Scroll Lock Section */
+.discover-approach {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf8ff 50%,
+    #ffffff 100%
+  );
+}
+
+.discover-approach__card {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 75vh;
+  background: linear-gradient(145deg, #ffffff 0%, #fdfcff 100%);
+  border-radius: 32px;
+  box-shadow: 
+    0 50px 100px -20px rgba(254, 0, 221, 0.15),
+    0 30px 60px -30px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(254, 0, 221, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.discover-approach__glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(254, 0, 221, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.discover-approach__content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  padding: 3rem;
+  height: 100%;
+  min-height: 75vh;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.discover-approach__text {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.discover-approach__header {
+  margin-bottom: 2rem;
+}
+
+.discover-approach__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fe00dd;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, rgba(254, 0, 221, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-radius: 20px;
+}
+
+.discover-approach__heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #fe00dd 50%, #ffd700 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.discover-approach__progress {
+  width: 100%;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.discover-approach__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #fe00dd 0%, #ffd700 100%);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.discover-approach__counter {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.discover-approach__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.discover-approach__item {
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+  padding-left: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.discover-approach__item-dot {
+  position: absolute;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  transition: all 0.4s ease;
+}
+
+.discover-approach__item.active .discover-approach__item-dot {
+  transform: scale(1.4);
+  box-shadow: 0 0 12px currentColor;
+}
+
+.discover-approach__images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.discover-approach__image-box {
+  position: absolute;
+  inset: 0;
+}
+
+.discover-approach__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discover-approach__image-gradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.discover-approach__image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+  color: white;
+  padding: 4rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.discover-approach__image-number {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #fe00dd 0%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: monospace;
+}
+
+.discover-approach__image-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.discover-approach__scroll-hint {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.discover-approach__scroll-icon {
+  font-size: 1.2rem;
+}
+
+/* Vision & Mission Section */
+.discover-vision-mission {
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fffbf5 30%,
+    #fff9fb 70%,
+    #ffffff 100%
+  );
+  margin: 0;
+  margin-top: 8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.discover-vision-mission .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.discover-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 4rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(254, 0, 221, 0.1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.discover-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #fe00dd 0%, #ffd700 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.discover-card:hover::before {
+  transform: scaleX(1);
+}
+
+.discover-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(254, 0, 221, 0.15);
+  border-color: rgba(254, 0, 221, 0.3);
+}
+
+.discover-card__icon {
+  margin-bottom: 2rem;
+}
+
+.discover-card__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #fe00dd 0%, #FF1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Georgia', serif;
+}
+
+.discover-card__text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .discover-director__top-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .discover-director__portrait-small {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .discover-director__full-text {
+    gap: 1rem;
+  }
+
+  .discover-approach__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .discover-approach__images {
+    min-height: 350px;
+  }
+
+  .discover-vision-mission .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-hero {
+    height: 80vh;
+  }
+
+  .discover-about {
+    padding: 5rem 1.5rem;
+  }
+
+  .discover-about__text p {
+    text-align: left;
+  }
+
+  .discover-director {
+    padding: 5rem 1.5rem;
+  }
+
+  .discover-director__top-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .discover-director__portrait-small {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .discover-director__full-text {
+    gap: 1rem;
+  }
+
+  .discover-director__bold-text p {
+    font-size: 0.95rem;
+  }
+
+  .discover-director__quote {
+    padding: 1.2rem;
+  }
+
+  .discover-director__quote p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .discover-approach {
+    padding: 2rem 1rem;
+  }
+
+  .discover-approach__card {
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .discover-approach__content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .discover-approach__heading {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .discover-approach__list {
+    gap: 0.6rem;
+  }
+
+  .discover-approach__item {
+    font-size: 0.9rem;
+    padding-left: 1.4rem;
+  }
+
+  .discover-approach__images {
+    min-height: 280px;
+    border-radius: 16px;
+  }
+
+  .discover-approach__image-number {
+    font-size: 1.5rem;
+  }
+
+  .discover-approach__image-title {
+    font-size: 0.95rem;
+  }
+
+  .discover-vision-mission {
+    padding: 4rem 1.5rem;
+  }
+
+  .discover-card {
+    padding: 3rem 2rem;
+  }
+
+  .discover-card__title {
+    font-size: 1.5rem;
+  }
+}

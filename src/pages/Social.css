@@ -1,0 +1,557 @@
+/* Social Events Page - Vibrant & Celebratory */
+
+.social {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* Vibrant Gradient for celebratory theme */
+.text-gradient-vibrant {
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 50%, #fe00dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.social-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.social-hero__video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.social-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.social-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 239, 22, 0.2) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(254, 0, 221, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.social-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.social-hero__text-card {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 28px;
+  padding: 4.5rem 4rem;
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(248, 239, 22, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  max-width: 950px;
+  text-align: center;
+}
+
+.social-hero__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.social-hero__description {
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.97);
+  font-weight: 400;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.social-hero__scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+/* ============================================
+   CORE SERVICES SECTION
+   ============================================ */
+
+.social-services {
+  position: relative;
+  padding: 9rem 2rem;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(248, 239, 22, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(250, 133, 89, 0.12) 0%, transparent 45%),
+    linear-gradient(180deg, #ffffff 0%, #fffef5 25%, #fff9e6 50%, #fffef5 75%, #ffffff 100%);
+}
+
+.social-services__container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.social-services__header {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.social-services__title {
+  font-size: clamp(2.6rem, 5.5vw, 4.3rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.social-services__subtitle {
+  font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+  color: #64748b;
+  font-weight: 400;
+}
+
+.social-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.8rem;
+}
+
+/* Service Cards with Yellow/Orange Border */
+.social-service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: visible;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 6px 28px rgba(248, 239, 22, 0.1),
+    0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.social-service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 28px 55px rgba(248, 239, 22, 0.2),
+    0 10px 28px rgba(250, 133, 89, 0.15);
+}
+
+/* Vibrant Border Effect */
+.social-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #f8ef16;
+  border-radius: 24px;
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.85s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 0 25px rgba(248, 239, 22, 0.5);
+}
+
+.social-service-card:hover::after {
+  opacity: 1;
+  transform: translate(-10px, -10px);
+}
+
+.social-service-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 24px 24px 0 0;
+}
+
+.social-service-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.98) saturate(1.15);
+}
+
+.social-service-card:hover .social-service-card__image {
+  transform: scale(1.1);
+}
+
+.social-service-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(248, 239, 22, 0.25) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.social-service-card:hover .social-service-card__overlay {
+  opacity: 1;
+}
+
+.social-service-card__content {
+  padding: 2.3rem 2rem;
+  text-align: center;
+}
+
+.social-service-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+.social-service-card:hover .social-service-card__title {
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.04);
+}
+
+.social-service-card__description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.social-why {
+  position: relative;
+  padding: 9rem 2rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fff5f7 30%,
+    #ffede0 50%,
+    #fff5f7 70%,
+    #ffffff 100%
+  );
+  overflow: hidden;
+}
+
+.social-why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(254, 0, 221, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(248, 239, 22, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.social-why__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.social-why__header {
+  text-align: center;
+  margin-bottom: 5.5rem;
+}
+
+.social-why__title {
+  font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.social-why__subtitle {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: #64748b;
+  font-weight: 400;
+}
+
+.social-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+/* Why Cards with Colorful Borders */
+.social-why-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 3.2rem 2.3rem;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.06);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.social-why-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  padding: 2px;
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 50%, #fe00dd 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.social-why-card:hover::before {
+  opacity: 1;
+}
+
+.social-why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 22px 48px rgba(248, 239, 22, 0.18),
+    0 8px 28px rgba(250, 133, 89, 0.12);
+}
+
+.social-why-card__icon {
+  font-size: 3.8rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-why-card:hover .social-why-card__icon {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+.social-why-card__title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: 'Georgia', serif;
+}
+
+.social-why-card:hover .social-why-card__title {
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 50%, #fe00dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.social-why-card__description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.social-cta {
+  position: relative;
+  padding: 7.5rem 2rem;
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 40%, #fe00dd 100%);
+  overflow: hidden;
+}
+
+.social-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 0, 0, 0.12) 0%, transparent 50%);
+}
+
+.social-cta__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.social-cta__text {
+  margin-bottom: 0;
+}
+
+.social-cta__title {
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  margin-bottom: 0;
+  line-height: 1.2;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.22);
+}
+
+.social-cta__buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-cta__button {
+  padding: 1.35rem 3.5rem;
+  border-radius: 60px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-cta__button--primary {
+  background: linear-gradient(135deg, #ffffff 0%, #fffef5 100%);
+  color: #fa8559;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.social-cta__button--primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f8ef16 0%, #fa8559 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.social-cta__button--primary:hover {
+  color: #0F172A;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 18px 45px rgba(248, 239, 22, 0.4),
+    0 8px 25px rgba(250, 133, 89, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.social-cta__button--primary:hover::before {
+  opacity: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .social-hero__text-card {
+    padding: 3.8rem 3.2rem;
+  }
+
+  .social-services__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-hero {
+    padding: 0 1.5rem;
+  }
+
+  .social-hero__text-card {
+    padding: 3rem 2rem;
+  }
+
+  .social-services,
+  .social-why,
+  .social-cta {
+    padding: 6rem 1.5rem;
+  }
+
+  .social-services__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .social-why__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .social-cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-cta__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-hero__text-card {
+    padding: 2.5rem 1.8rem;
+  }
+
+  .social-service-card__content,
+  .social-why-card {
+    padding: 2rem 1.6rem;
+  }
+}

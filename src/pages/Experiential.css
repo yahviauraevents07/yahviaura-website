@@ -1,0 +1,575 @@
+/* Experiential Events Page */
+
+.experiential {
+  width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+/* Orange Gradient for experiential theme */
+.text-gradient-orange {
+  background: linear-gradient(135deg, #fa8559 0%, #f8ef16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.experiential-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 0 4rem;
+}
+
+.experiential-hero__video-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.experiential-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experiential-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(250, 133, 89, 0.2) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.experiential-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experiential-hero__text-card {
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 4rem 3.5rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(250, 133, 89, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+}
+
+.experiential-hero__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.experiential-hero__description {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  max-width: 550px;
+}
+
+.experiential-hero__scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+/* ============================================
+   CORE SERVICES SECTION
+   ============================================ */
+
+.experiential-services {
+  position: relative;
+  padding: 8rem 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(250, 133, 89, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(248, 239, 22, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(250, 133, 89, 0.08) 0%, transparent 60%),
+    linear-gradient(135deg, #ffffff 0%, #fff9f5 25%, #ffede0 50%, #fff9f5 75%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.experiential-services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(250, 133, 89, 0.03) 0px,
+      transparent 1px,
+      transparent 100px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(248, 239, 22, 0.03) 0px,
+      transparent 1px,
+      transparent 100px
+    );
+  pointer-events: none;
+}
+
+.experiential-services__container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.experiential-services__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.experiential-services__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.experiential-services__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #64748b;
+  font-weight: 400;
+}
+
+.experiential-services__grid {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 2rem 2rem 4rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #fa8559 #f5f5f5;
+}
+
+.experiential-services__grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.experiential-services__grid::-webkit-scrollbar-track {
+  background: rgba(245, 245, 245, 0.5);
+  border-radius: 10px;
+  margin: 0 4rem;
+}
+
+.experiential-services__grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #fa8559 0%, #f8ef16 100%);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.experiential-services__grid::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #f87732 0%, #f8ef16 100%);
+}
+
+/* Service Card with Orange Border Effect */
+.experiential-service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: visible;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  flex: 0 0 380px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.experiential-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(250, 133, 89, 0.2);
+}
+
+/* Orange Border Frame Effect on entire card */
+.experiential-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #fa8559;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.experiential-service-card:hover::after {
+  opacity: 1;
+  transform: translate(-10px, -10px);
+}
+
+.experiential-service-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px 20px 0 0;
+}
+
+.experiential-service-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experiential-service-card:hover .experiential-service-card__image {
+  transform: scale(1.08);
+}
+
+.experiential-service-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(15, 23, 42, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experiential-service-card:hover .experiential-service-card__overlay {
+  opacity: 1;
+}
+
+.experiential-service-card__content {
+  padding: 2rem 1.75rem;
+}
+
+.experiential-service-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.experiential-service-card:hover .experiential-service-card__title {
+  color: #fa8559;
+}
+
+.experiential-service-card__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* ============================================
+   WHY IT WORKS SECTION
+   ============================================ */
+
+.experiential-why {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fff9f5 25%,
+    #ffede0 50%,
+    #fff9f5 75%,
+    #ffffff 100%
+  );
+  overflow: hidden;
+}
+
+.experiential-why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(250, 133, 89, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(248, 239, 22, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.experiential-why__overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.experiential-why__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.experiential-why__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.experiential-why__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.experiential-why__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #64748b;
+  font-weight: 400;
+}
+
+.experiential-why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Why Cards with Orange Accents */
+.experiential-why-card {
+  background: #ffffff;
+  border: 2px solid #fa8559;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.experiential-why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(250, 133, 89, 0.2);
+  border-color: #f8ef16;
+}
+
+.experiential-why-card__icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  filter: grayscale(0.2);
+}
+
+.experiential-why-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.experiential-why-card:hover .experiential-why-card__title {
+  background: linear-gradient(135deg, #fa8559 0%, #f8ef16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.experiential-why-card__description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.experiential-cta {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #fa8559 0%, #f87732 50%, #f8ef16 100%);
+  overflow: hidden;
+}
+
+.experiential-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+}
+
+.experiential-cta__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.experiential-cta__text {
+  margin-bottom: 0;
+}
+
+.experiential-cta__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experiential-cta__description {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experiential-cta__buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.experiential-cta__button {
+  padding: 1.25rem 3rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.experiential-cta__button--primary {
+  background: #ffffff;
+  color: #fa8559;
+}
+
+.experiential-cta__button--primary:hover {
+  background: #0F172A;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .experiential-hero {
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  .experiential-hero__text-card {
+    max-width: 100%;
+  }
+
+  .experiential-services__grid {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+
+  .experiential-service-card {
+    flex: 0 0 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experiential-hero {
+    padding: 0 1.5rem;
+  }
+
+  .experiential-hero__text-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .experiential-services,
+  .experiential-why,
+  .experiential-cta {
+    padding: 5rem 0;
+  }
+
+  .experiential-services__grid {
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .experiential-service-card {
+    flex: 0 0 280px;
+  }
+
+  .experiential-why__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .experiential-cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .experiential-cta__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiential-hero__text-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .experiential-service-card__content,
+  .experiential-why-card {
+    padding: 1.5rem;
+  }
+
+  .experiential-service-card {
+    flex: 0 0 260px;
+  }
+}

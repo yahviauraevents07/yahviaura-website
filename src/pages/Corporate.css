@@ -1,0 +1,526 @@
+/* Corporate Events Page - Premium Design */
+
+.corporate {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Global Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, #fe00dd 0%, #f8ef16 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   HERO SECTION WITH VIDEO BACKGROUND
+   ============================================ */
+
+.corporate-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.corporate-hero__video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.corporate-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.corporate-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(15, 23, 42, 0.75) 50%,
+    rgba(254, 0, 221, 0.15) 100%
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.corporate-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.corporate-hero__text-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 4rem 3.5rem;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 100px rgba(254, 0, 221, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  max-width: 900px;
+}
+
+.corporate-hero__title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.corporate-hero__description {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.corporate-hero__scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.corporate-hero__scroll-indicator:hover {
+  opacity: 1;
+}
+
+/* ============================================
+   CORE SERVICES SECTION
+   ============================================ */
+
+.corporate-services {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fef7ff 50%,
+    #ffffff 100%
+  );
+}
+
+.corporate-services__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.corporate-services__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.corporate-services__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.corporate-services__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #64748b;
+  font-weight: 400;
+}
+
+.corporate-services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Service Card with Hover Effect */
+.corporate-service-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: visible;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.corporate-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(254, 0, 221, 0.15);
+}
+
+/* Border Frame Effect on entire card */
+.corporate-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid #fe00dd;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corporate-service-card:hover::after {
+  opacity: 1;
+  transform: translate(-10px, -10px);
+}
+
+.corporate-service-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px 20px 0 0;
+}
+
+.corporate-service-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.corporate-service-card:hover .corporate-service-card__image {
+  transform: scale(1.08);
+}
+
+.corporate-service-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(15, 23, 42, 0.7) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.corporate-service-card:hover .corporate-service-card__overlay {
+  opacity: 1;
+}
+
+.corporate-service-card__content {
+  padding: 2rem 1.75rem;
+}
+
+.corporate-service-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+
+.corporate-service-card:hover .corporate-service-card__title {
+  color: #fe00dd;
+}
+
+.corporate-service-card__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.corporate-why {
+  position: relative;
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fef7ff 25%,
+    #fff0f9 50%,
+    #fef7ff 75%,
+    #ffffff 100%
+  );
+  overflow: hidden;
+}
+
+.corporate-why::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(254, 0, 221, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(248, 239, 22, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.corporate-why__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.corporate-why__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.corporate-why__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #0F172A;
+  letter-spacing: -0.02em;
+}
+
+.corporate-why__strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Value Card */
+.corporate-why-card {
+  background: #ffffff;
+  border: 2px solid rgba(254, 0, 221, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(254, 0, 221, 0.08);
+}
+
+.corporate-why-card:hover {
+  transform: translateY(-12px);
+  background: #ffffff;
+  border-color: #f8ef16;
+  box-shadow: 
+    0 20px 40px rgba(248, 239, 22, 0.2),
+    0 0 60px rgba(254, 0, 221, 0.15);
+}
+
+.corporate-why-card__icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 12px rgba(248, 239, 22, 0.3));
+}
+
+.corporate-why-card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.corporate-why-card__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* ============================================
+   HIGH-IMPACT CTA SECTION
+   ============================================ */
+
+.corporate-cta {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #fe00dd 0%, #a80fd2 50%, #f8ef16 100%);
+  overflow: hidden;
+}
+
+.corporate-cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(0, 0, 0, 0.1) 0%, transparent 50%);
+}
+
+.corporate-cta__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.corporate-cta__text {
+  margin-bottom: 0;
+}
+
+.corporate-cta__title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  margin-bottom: 0;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.corporate-cta__description {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.corporate-cta__description a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.corporate-cta__description a:hover {
+  opacity: 0.8;
+}
+
+.corporate-cta__buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.corporate-cta__button {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #ffffff;
+  color: #fe00dd;
+}
+
+.corporate-cta__button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 992px) {
+  .corporate-hero__text-card {
+    padding: 3rem 2.5rem;
+  }
+
+  .corporate-services,
+  .corporate-why,
+  .corporate-cta {
+    padding: 5rem 1.5rem;
+  }
+
+  .corporate-services__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .corporate-why__strip {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .corporate-cta__buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .corporate-cta__button {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .corporate-hero {
+    min-height: 600px;
+  }
+
+  .corporate-hero__text-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .corporate-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .corporate-why__strip {
+    grid-template-columns: 1fr;
+  }
+
+  .corporate-sticky-cta {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .corporate-sticky-cta__button {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .corporate-sticky-cta__text {
+    display: none;
+  }
+
+  .corporate-sticky-cta__icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .corporate-service-card,
+  .corporate-why-card,
+  .corporate-cta__button,
+  .corporate-sticky-cta__button {
+    transition: none;
+  }
+
+  .corporate-hero__scroll-indicator {
+    animation: none;
+  }
+}
