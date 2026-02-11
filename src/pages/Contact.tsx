@@ -241,7 +241,7 @@ const Contact = () => {
                       </div>
                       <div className="contact-info-item__content">
                         <h4 className="contact-info-item__label">Email</h4>
-                        <p className="contact-info-item__value">yashu@yahviaura.com</p>
+                        <p className="contact-info-item__value">info@yahviaura.com</p>
                       </div>
                     </a>
                   </div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserTie, faHandshake, faCreditCard, faTags, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faUserTie, faHandshake, faCreditCard, faTags, faHeart, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Home.css';
 
 const Home = () => {
@@ -45,8 +45,8 @@ const Home = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
           >
-            <div className="scroll-line" />
             <span>Scroll to explore</span>
+            <FontAwesomeIcon icon={faChevronDown} className="scroll-arrow" />
           </motion.div>
         </div>
       </section>
