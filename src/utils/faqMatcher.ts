@@ -15,7 +15,7 @@ export const findAnswer = (userQuestion: string, faqs: FAQ[]): MatchResult => {
   if (greetings.some(greeting => lowerQuery === greeting || lowerQuery === `${greeting}!`)) {
     return {
       found: true,
-      answer: "Hello! I'm Aurie, your Yahvi Aura assistant. I'm here to help you create heavenly experiences. What would you like to know about our services?"
+      answer: "Hello! I'm Arya, your Yahvi Aura assistant. I'm here to help you create heavenly experiences. What would you like to know about our services?"
     };
   }
 

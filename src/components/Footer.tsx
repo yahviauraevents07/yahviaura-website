@@ -72,7 +72,7 @@ const Footer = () => {
             
             {/* A */}
             <motion.path
-              d="M 150 200 L 190 40 L 230 200"
+              d="M 138 200 L 175 40 L 220 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -95,7 +95,7 @@ const Footer = () => {
             
             {/* H */}
             <motion.path
-              d="M 270 40 L 270 200 M 270 120 L 340 120 M 340 40 L 340 200"
+              d="M 260 40 L 260 200 M 260 120 L 330 120 M 330 40 L 330 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -108,7 +108,7 @@ const Footer = () => {
             
             {/* V */}
             <motion.path
-              d="M 390 40 L 440 200 L 490 40"
+              d="M 370 40 L 420 200 L 470 40"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -121,7 +121,7 @@ const Footer = () => {
             
             {/* I */}
             <motion.path
-              d="M 530 40 L 580 40 M 555 40 L 555 200 M 530 200 L 580 200"
+              d="M 510 40 L 560 40 M 535 40 L 535 200 M 510 200 L 560 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
