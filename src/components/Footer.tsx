@@ -47,7 +47,7 @@ const Footer = () => {
           <svg viewBox="0 0 1200 280" className="footer-calligraphy" preserveAspectRatio="xMidYMid meet">
             {/* Y - Left diagonal */}
             <motion.path
-              d="M 50 50 Q 70 90 85 130 L 85 200"
+              d="M 30 50 Q 50 90 65 130 L 65 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -59,7 +59,7 @@ const Footer = () => {
             />
             {/* Y - Right diagonal */}
             <motion.path
-              d="M 120 50 Q 100 90 85 130"
+              d="M 100 50 Q 80 90 65 130"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -72,7 +72,7 @@ const Footer = () => {
             
             {/* A */}
             <motion.path
-              d="M 170 200 L 210 40 L 250 200"
+              d="M 150 200 L 190 40 L 230 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -83,7 +83,7 @@ const Footer = () => {
               transition={{ duration: 1, ease: "easeInOut", delay: 0.1 }}
             />
             <motion.path
-              d="M 185 130 L 235 130"
+              d="M 165 130 L 215 130"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -95,7 +95,7 @@ const Footer = () => {
             
             {/* H */}
             <motion.path
-              d="M 310 40 L 310 200 M 310 120 L 380 120 M 380 40 L 380 200"
+              d="M 270 40 L 270 200 M 270 120 L 340 120 M 340 40 L 340 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -108,7 +108,7 @@ const Footer = () => {
             
             {/* V */}
             <motion.path
-              d="M 420 40 L 470 200 L 520 40"
+              d="M 390 40 L 440 200 L 490 40"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -121,7 +121,7 @@ const Footer = () => {
             
             {/* I */}
             <motion.path
-              d="M 550 40 L 600 40 M 575 40 L 575 200 M 550 200 L 600 200"
+              d="M 530 40 L 580 40 M 555 40 L 555 200 M 530 200 L 580 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -134,7 +134,7 @@ const Footer = () => {
             
             {/* A (AURA) */}
             <motion.path
-              d="M 670 200 L 710 40 L 750 200"
+              d="M 650 200 L 690 40 L 730 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -145,7 +145,7 @@ const Footer = () => {
               transition={{ duration: 1, ease: "easeInOut", delay: 0.35 }}
             />
             <motion.path
-              d="M 685 130 L 735 130"
+              d="M 665 130 L 715 130"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -157,7 +157,7 @@ const Footer = () => {
             
             {/* U */}
             <motion.path
-              d="M 790 40 L 790 160 Q 790 200, 830 200 Q 870 200, 870 160 L 870 40"
+              d="M 770 40 L 770 160 Q 770 200, 810 200 Q 850 200, 850 160 L 850 40"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -170,7 +170,7 @@ const Footer = () => {
             
             {/* R */}
             <motion.path
-              d="M 910 200 L 910 40 L 970 40 Q 990 40, 990 70 Q 990 100, 970 100 L 910 100 M 960 100 L 990 200"
+              d="M 890 200 L 890 40 L 950 40 Q 970 40, 970 70 Q 970 100, 950 100 L 890 100 M 940 100 L 970 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -183,7 +183,7 @@ const Footer = () => {
             
             {/* A */}
             <motion.path
-              d="M 1030 200 L 1070 40 L 1110 200"
+              d="M 1010 200 L 1050 40 L 1090 200"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"
@@ -194,7 +194,7 @@ const Footer = () => {
               transition={{ duration: 1, ease: "easeInOut", delay: 0.55 }}
             />
             <motion.path
-              d="M 1045 130 L 1095 130"
+              d="M 1025 130 L 1075 130"
               fill="transparent"
               strokeWidth="5"
               stroke="url(#yahviGradient)"

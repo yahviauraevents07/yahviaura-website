@@ -9,6 +9,8 @@ const Discover = () => {
   const approachRef = useRef<HTMLDivElement>(null);
   const scrollAccumulator = useRef(0);
   const lastScrollTime = useRef(0);
+  const touchStartY = useRef(0);
+  const touchEndY = useRef(0);
 
   const approaches = [
     {
@@ -119,7 +121,48 @@ const Discover = () => {
     }
   }, [isLocked, activeApproach, approaches.length]);
 
-  // Attach wheel listener
+  // Handle touch events for mobile scrolling
+  const handleTouchStart = useCallback((e: TouchEvent) => {
+    touchStartY.current = e.touches[0].clientY;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: TouchEvent) => {
+    if (!isLocked) return;
+
+    touchEndY.current = e.changedTouches[0].clientY;
+    const difference = touchStartY.current - touchEndY.current;
+
+    const now = Date.now();
+    // Throttle scroll events
+    if (now - lastScrollTime.current < 150) return;
+    lastScrollTime.current = now;
+
+    // Threshold for changing approach
+    const threshold = 40;
+
+    if (Math.abs(difference) > threshold) {
+      if (difference > 0) {
+        // Swiped up - next approach
+        if (activeApproach < approaches.length - 1) {
+          setActiveApproach(prev => prev + 1);
+        } else {
+          // Completed all approaches, unlock
+          setHasCompletedApproach(true);
+          setIsLocked(false);
+        }
+      } else {
+        // Swiped down - previous approach
+        if (activeApproach > 0) {
+          setActiveApproach(prev => prev - 1);
+        } else {
+          // At the beginning, going up, unlock
+          setIsLocked(false);
+        }
+      }
+    }
+  }, [isLocked, activeApproach, approaches.length]);
+
+  // Attach wheel and touch listeners
   useEffect(() => {
     const section = approachRef.current;
     if (!section) return;
@@ -128,6 +171,8 @@ const Discover = () => {
       // Prevent default scroll on the whole document when locked
       document.body.style.overflow = 'hidden';
       window.addEventListener('wheel', handleWheel, { passive: false });
+      window.addEventListener('touchstart', handleTouchStart, { passive: true });
+      window.addEventListener('touchend', handleTouchEnd, { passive: false });
     } else {
       document.body.style.overflow = '';
     }
@@ -135,8 +180,10 @@ const Discover = () => {
     return () => {
       document.body.style.overflow = '';
       window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [isLocked, handleWheel]);
+  }, [isLocked, handleWheel, handleTouchStart, handleTouchEnd]);
 
   // Reset when scrolling back to top
   useEffect(() => {
