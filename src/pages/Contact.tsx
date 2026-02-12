@@ -220,22 +220,71 @@ const Contact = () => {
               <div className="contact-info-card">
                 <h2 className="contact-form-card__title">Contact Information</h2>
                 <p className="contact-form-card__subtitle">
-                  Reach out to us directly through any of these channels
+                  Reach out to us directly at our offices
                 </p>
 
                 <div className="contact-info-list">
-                  <div className="contact-info-row">
+                  {/* Ghaziabad Office */}
+                  <div className="office-section">
+                    <h3 className="office-section__title">Ghaziabad Office</h3>
+                    
                     <a href="tel:+919315547880" className="contact-info-item">
                       <div className="contact-info-item__icon">
                         <FontAwesomeIcon icon={faPhone} />
                       </div>
                       <div className="contact-info-item__content">
                         <h4 className="contact-info-item__label">Phone</h4>
-                        <p className="contact-info-item__value">+91 9315547880</p>
+                        <p className="contact-info-item__value">+91 93155 47880</p>
+                        <p className="contact-info-item__person">Yashu Subhra</p>
                       </div>
                     </a>
 
-                    <a href="mailto:yashu@yahviaura.com" className="contact-info-item">
+                    <div className="contact-info-item">
+                      <div className="contact-info-item__icon">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                      </div>
+                      <div className="contact-info-item__content">
+                        <h4 className="contact-info-item__label">Address</h4>
+                        <p className="contact-info-item__value">
+                          Corporate Suites (CS) - 22, 3rd floor, Ansal Plaza Complex,<br />
+                          Sector 1, Vaishali, Ghaziabad, UP-201010
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Dehradun Office */}
+                  <div className="office-section">
+                    <h3 className="office-section__title">Dehradun Office</h3>
+                    
+                    <a href="tel:+919760848556" className="contact-info-item">
+                      <div className="contact-info-item__icon">
+                        <FontAwesomeIcon icon={faPhone} />
+                      </div>
+                      <div className="contact-info-item__content">
+                        <h4 className="contact-info-item__label">Phone</h4>
+                        <p className="contact-info-item__value">+91 97608 48556</p>
+                        <p className="contact-info-item__person">Piyush Mathur</p>
+                      </div>
+                    </a>
+
+                    <div className="contact-info-item">
+                      <div className="contact-info-item__icon">
+                        <FontAwesomeIcon icon={faMapMarkerAlt} />
+                      </div>
+                      <div className="contact-info-item__content">
+                        <h4 className="contact-info-item__label">Address</h4>
+                        <p className="contact-info-item__value">
+                          163A, 3rd Floor, Brother's Tower, Rajpur Rd.,<br />
+                          Jakhan, Dehradun-248001 (Above Turtle store)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Email Section */}
+                  <div className="office-section">
+                    <a href="mailto:info@yahviaura.com" className="contact-info-item contact-info-item--email">
                       <div className="contact-info-item__icon">
                         <FontAwesomeIcon icon={faEnvelope} />
                       </div>
@@ -245,42 +294,12 @@ const Contact = () => {
                       </div>
                     </a>
                   </div>
-
-                  <div className="contact-info-item">
-                    <div className="contact-info-item__icon">
-                      <FontAwesomeIcon icon={faMapMarkerAlt} />
-                    </div>
-                    <div className="contact-info-item__content">
-                      <h4 className="contact-info-item__label">Address</h4>
-                      <p className="contact-info-item__value">
-                        CS-22, 3rd floor, Ansal Plaza Complex, Sector 1, Vaishali, Ghaziabad, UP-201010
-                      </p>
-                    </div>
-                  </div>
                 </div>
 
-                {/* Map and Social Grid */}
-                <div className="contact-info-bottom">
-                  {/* Google Maps - Square Shape */}
-                  <div className="contact-info-map">
-                    <div className="contact-info-map__wrapper">
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.054776827863!2d77.33088107549762!3d28.64527507566194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfbb50e3b366b%3A0xc0b83ed8d215ffe9!2sAnsal%20Plaza%2C%20Vaishali!5e0!3m2!1sen!2sin!4v1738719600000!5m2!1sen!2sin"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Yahvi Aura Events Location"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Social Links - On Right Side */}
-                  <div className="contact-info-social">
-                    <h4 className="contact-info-social__title">Follow Us</h4>
-                    <div className="contact-info-social__links">
+                {/* Social Links - Horizontal */}
+                <div className="contact-info-social">
+                  <h4 className="contact-info-social__title">Follow Us</h4>
+                  <div className="contact-info-social__links">
                     <a
                       href="https://www.instagram.com/yahviauraevent/profilecard/?igsh=Nnptd25pNW5ld3N3"
                       target="_blank"
@@ -319,7 +338,6 @@ const Contact = () => {
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                  </div>
                   </div>
                 </div>
               </div>
