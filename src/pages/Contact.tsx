@@ -209,7 +209,7 @@ const Contact = () => {
               </div>
             </motion.div>
 
-            {/* Right Side - Contact Details & Map */}
+            {/* Right Side - Contact Details */}
             <motion.div
               className="contact-info-wrapper"
               initial={{ opacity: 0, x: 50 }}
@@ -219,8 +219,20 @@ const Contact = () => {
             >
               <div className="contact-info-card">
                 <h2 className="contact-form-card__title">Contact Information</h2>
+                  {/* Email Section */}
+                  <div className="office-section">
+                    <a href="mailto:info@yahviaura.com" className="contact-info-item contact-info-item--email">
+                      <div className="contact-info-item__icon">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                      </div>
+                      <div className="contact-info-item__content">
+                        <h4 className="contact-info-item__label">Email</h4>
+                        <p className="contact-info-item__value">info@yahviaura.com</p>
+                      </div>
+                    </a>
+                  </div>
+                  
                 <p className="contact-form-card__subtitle">
-                  Reach out to us directly at our offices
                 </p>
 
                 <div className="contact-info-list">
@@ -280,19 +292,6 @@ const Contact = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
-
-                  {/* Email Section */}
-                  <div className="office-section">
-                    <a href="mailto:info@yahviaura.com" className="contact-info-item contact-info-item--email">
-                      <div className="contact-info-item__icon">
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </div>
-                      <div className="contact-info-item__content">
-                        <h4 className="contact-info-item__label">Email</h4>
-                        <p className="contact-info-item__value">info@yahviaura.com</p>
-                      </div>
-                    </a>
                   </div>
                 </div>
 
