@@ -231,6 +231,19 @@ const Contact = () => {
                       </div>
                     </a>
                   </div>
+
+                  {/* Phone Section */}
+                  <div className="office-section" style={{ marginTop: '10px' }}>
+                    <a href="tel:+919258207515" className="contact-info-item contact-info-item--phone">
+                      <div className="contact-info-item__icon">
+                        <FontAwesomeIcon icon={faPhone} />
+                      </div>
+                      <div className="contact-info-item__content">
+                        <h4 className="contact-info-item__label">Contact Us</h4>
+                        <p className="contact-info-item__value">+91 92582 07515</p>
+                      </div>
+                    </a>
+                  </div>
                   
                 <p className="contact-form-card__subtitle">
                 </p>
@@ -240,13 +253,13 @@ const Contact = () => {
                   <div className="office-section">
                     <h3 className="office-section__title">Ghaziabad Office</h3>
                     
-                    <a href="tel:+919315547880" className="contact-info-item">
+                    <a href="tel:+919258207515" className="contact-info-item">
                       <div className="contact-info-item__icon">
                         <FontAwesomeIcon icon={faPhone} />
                       </div>
                       <div className="contact-info-item__content">
                         <h4 className="contact-info-item__label">Phone</h4>
-                        <p className="contact-info-item__value">+91 93155 47880</p>
+                        <p className="contact-info-item__value">+91 92582 07515</p>
                         <p className="contact-info-item__person">Yashu Subhra</p>
                       </div>
                     </a>
@@ -318,7 +331,7 @@ const Contact = () => {
                       <FontAwesomeIcon icon={faFacebook} />
                     </a>
                     <a
-                      href="https://api.whatsapp.com/send/?phone=919315547880&text=Hello%0D%0Alike+to+know+more+infomation&type=phone_number&app_absent=0"
+                      href="https://api.whatsapp.com/send/?phone=919258207515&text=Hello%0D%0Alike+to+know+more+infomation&type=phone_number&app_absent=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="contact-info-social__link"

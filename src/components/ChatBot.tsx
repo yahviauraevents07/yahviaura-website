@@ -64,7 +64,7 @@ const ChatBot = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/919315547880?text=Hi! I have a question about Yahvi Aura Events', '_blank');
+    window.open('https://wa.me/919258207515?text=Hi! I have a question about Yahvi Aura Events', '_blank');
   };
 
   return (

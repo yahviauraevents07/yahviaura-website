@@ -231,7 +231,7 @@ const Weddings = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <a href="tel:+919315547880" className="weddings-cta__button weddings-cta__button--primary">
+            <a href="tel:+919258207515" className="weddings-cta__button weddings-cta__button--primary">
               Book a Consultation
             </a>
           </motion.div>

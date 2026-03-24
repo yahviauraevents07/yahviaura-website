@@ -543,7 +543,7 @@ const Home = () => {
               Let's design your next experience together.
             </p>
             <motion.a
-              href="https://api.whatsapp.com/send/?phone=919315547880&text=Hello%0D%0Alike+to+know+more+infomation&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=919258207515&text=Hello%0D%0Alike+to+know+more+infomation&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-button"

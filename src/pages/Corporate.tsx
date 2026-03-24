@@ -212,7 +212,7 @@ const Corporate = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <a href="tel:+919315547880" className="corporate-cta__button corporate-cta__button--primary">
+            <a href="tel:+919258207515" className="corporate-cta__button corporate-cta__button--primary">
               Request a Tailored Plan
             </a>
           </motion.div>

@@ -100,7 +100,7 @@ export const faqs: FAQ[] = [
     category: "Pricing",
     question: "How much do your services cost?",
     keywords: ["cost", "price", "pricing", "how much", "charges", "fees", "rates", "expensive", "affordable"],
-    answer: "Our pricing is customized based on event type, scale, requirements, and services needed. We offer flexible packages to fit various budgets without compromising quality. For a detailed quote tailored to your event, please call us at +91 9315547880 or submit a request through our website. We believe in transparent pricing with no hidden costs."
+    answer: "Our pricing is customized based on event type, scale, requirements, and services needed. We offer flexible packages to fit various budgets without compromising quality. For a detailed quote tailored to your event, please call us at +91 9258207515 or submit a request through our website. We believe in transparent pricing with no hidden costs."
   },
   {
     id: 13,
@@ -146,7 +146,7 @@ export const faqs: FAQ[] = [
     category: "Process",
     question: "How do I book your services?",
     keywords: ["book", "booking", "hire", "get started", "how to book", "reservation"],
-    answer: "Booking is easy! Step 1: Contact us at +91 9315547880 or through our website. Step 2: Schedule a consultation (in-person or virtual) to discuss your vision. Step 3: Receive a customized proposal with pricing. Step 4: Sign agreement and pay advance to secure your date. Step 5: We begin planning your dream event!"
+    answer: "Booking is easy! Step 1: Contact us at +91 9258207515 or through our website. Step 2: Schedule a consultation (in-person or virtual) to discuss your vision. Step 3: Receive a customized proposal with pricing. Step 4: Sign agreement and pay advance to secure your date. Step 5: We begin planning your dream event!"
   },
   {
     id: 19,
@@ -210,14 +210,14 @@ export const faqs: FAQ[] = [
     category: "Contact",
     question: "How can I contact you?",
     keywords: ["contact", "call", "phone", "email", "whatsapp", "reach"],
-    answer: "You can reach us at: Phone/WhatsApp: +91 9315547880, or visit our Contact page on the website to send a message. We respond within 24 hours and are available for consultations via call, WhatsApp, video call, or in-person meetings."
+    answer: "You can reach us at: Phone/WhatsApp: +91 9258207515, or visit our Contact page on the website to send a message. We respond within 24 hours and are available for consultations via call, WhatsApp, video call, or in-person meetings."
   },
   {
     id: 27,
     category: "Contact",
     question: "What are your working hours?",
     keywords: ["hours", "timings", "working hours", "open", "availability"],
-    answer: "Our office hours are Monday-Saturday, 10 AM - 7 PM. However, for urgent event matters and day-of coordination, we're available 24/7. You can reach us anytime via WhatsApp at +91 9315547880."
+    answer: "Our office hours are Monday-Saturday, 10 AM - 7 PM. However, for urgent event matters and day-of coordination, we're available 24/7. You can reach us anytime via WhatsApp at +91 9258207515."
   },
 
   // VENUE

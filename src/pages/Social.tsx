@@ -216,7 +216,7 @@ const Social = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <a href="tel:+919315547880" className="social-cta__button social-cta__button--primary">
+            <a href="tel:+919258207515" className="social-cta__button social-cta__button--primary">
               Plan Your Event
             </a>
           </motion.div>
