@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
 import ScrollToTop from './components/ScrollToTop';
-import { Home, Discover, Gallery, Portfolio, Blogs, Contact, Corporate, Experiential, Weddings, Social } from './pages';
+import { Home, Discover, Gallery, Portfolio, Blogs, Contact, Corporate, Experiential, Weddings, Social, EnterpriseROISeries, ComingSoonSeries, AuraResonanceArticle } from './pages';
 import './App.css';
 
 function App() {
@@ -25,6 +25,11 @@ function App() {
               <Route path="/social-events" element={<Social />} />
               <Route path="/portfolio/*" element={<Portfolio />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blog/the_enterprise_ROI_series" element={<EnterpriseROISeries />} />
+              <Route path="/blog/borderless_logistics" element={<ComingSoonSeries title="Borderless Logistics & Scale" />} />
+              <Route path="/blog/risk_mitigation" element={<ComingSoonSeries title="Risk Mitigation" />} />
+              <Route path="/blog/enterprise_procurement_&_budget_optimization" element={<ComingSoonSeries title="Enterprise Procurement & Budget Optimization" />} />
+              <Route path="/blog/the-enterprise-roi-series/blending-5ps-7ps-into-aura-resonance-framework" element={<AuraResonanceArticle />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

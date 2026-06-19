@@ -7,7 +7,10 @@ export { default as Corporate } from './Corporate';
 export { default as Experiential } from './Experiential';
 export { default as Weddings } from './Weddings';
 export { default as Social } from './Social';
+export { default as Blogs } from './Blogs';
+export { default as EnterpriseROISeries } from './EnterpriseROISeries';
+export { default as ComingSoonSeries } from './ComingSoonSeries';
+export { default as AuraResonanceArticle } from './AuraResonanceArticle';
 
 // Placeholder pages for routing (to be implemented)
 export const Portfolio = () => <div style={{ paddingTop: '100px', minHeight: '100vh' }}><h1>Portfolio</h1></div>;
-export const Blogs = () => <div style={{ paddingTop: '100px', minHeight: '100vh' }}><h1>Blogs</h1></div>;

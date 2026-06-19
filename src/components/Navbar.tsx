@@ -99,7 +99,8 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Discover Us', path: '/discover' },
     { name: 'Our Diverse Portfolio', path: '/portfolio', hasMegaMenu: true, isPlaceholder: true },
-    { name: 'Gallery', path: '/gallery' }
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Blogs', path: '/blogs' }
   ];
 
   const isActiveLink = (path: string) => {
