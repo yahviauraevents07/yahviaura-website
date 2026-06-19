@@ -81,21 +81,6 @@ const Blogs = () => {
       {/* Blog Cards Section */}
       <section className="blogs-section" id="blogs-list">
         <div className="blogs-section__container">
-          <motion.div
-            className="blogs-section__header"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="blogs-section__title">
-              Series under <span className="text-gradient">Blog Section</span>
-            </h2>
-            <p className="blogs-section__subtitle">
-              Delve into our curated series addressing enterprise scale, critical logistics, risk mitigation, and budget procurement.
-            </p>
-          </motion.div>
-
           <div className="blogs-grid">
             {blogList.map((blog, index) => (
               <Link

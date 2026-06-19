@@ -8,7 +8,7 @@ const EnterpriseROISeries = () => {
   const articles = [
     {
       title: "Blending the 5 P's and 7 P's into The Aura Resonance Framework",
-      preview: "In the global enterprise landscape, executing a corporate event is a multi-million dollar variable. Learn how traditional frameworks fall short in modern, high-stakes global execution, and discover our unified delivery system: The Aura Resonance Framework™.",
+      preview: "In the global enterprise landscape, executing a corporate event is a multi-million dollar variable. Learn how traditional frameworks fall short in modern, high-stakes global execution, and discover our unified delivery system: The Aura Resonance Framework.",
       url: "/blog/the-enterprise-roi-series/blending-5ps-7ps-into-aura-resonance-framework",
       date: "June 19, 2026",
       readTime: "3 min read",
