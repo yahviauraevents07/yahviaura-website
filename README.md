@@ -1,1 +1,1 @@
-This is Repo for website oof yahviaura.com
+This is Repo for website of yahviaura.com
