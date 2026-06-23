@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +7,47 @@ import { faInstagram, faFacebook, faLinkedin } from '@fortawesome/free-brands-sv
 import './Contact.css';
 
 const Contact = () => {
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
+    const script = document.createElement('script');
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    
+    const initCalendly = () => {
+      if ((window as any).Calendly) {
+        (window as any).Calendly.initInlineWidget({
+          url: 'https://calendly.com/yahviauraevents/30min?background_color=ffffff&text_color=333333&primary_color=fe00dd',
+          parentElement: document.getElementById('calendly-inline-container'),
+          prefill: {},
+          pageSettings: {
+            hideLandingPageDetails: false,
+            hideGdprBanner: true,
+          }
+        });
+      }
+    };
+
+    script.onload = initCalendly;
+    document.body.appendChild(script);
+
+    if ((window as any).Calendly) {
+      initCalendly();
+    }
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -355,6 +396,24 @@ const Contact = () => {
               </div>
             </motion.div>
           </div>
+
+          {/* Calendly Consultation Section */}
+          <motion.div
+            className="contact-calendly-card"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h2 className="contact-calendly__title">Schedule a Discovery Consultation</h2>
+            <p className="contact-calendly__subtitle">
+              Choose a time slot below to reserve a direct 30-minute briefing session with our event strategy team.
+            </p>
+            <div className="calendly-widget-wrapper">
+              <div id="calendly-inline-container" className="calendly-inline-widget" />
+            </div>
+          </motion.div>
+
         </div>
       </section>
     </div>

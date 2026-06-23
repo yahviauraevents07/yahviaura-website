@@ -590,3 +590,96 @@
     gap: 0.8rem;
   }
 }
+
+/* Calendly Consultation Section */
+.contact-calendly-card {
+  margin-top: 3.5rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 
+    0 20px 60px rgba(254, 0, 221, 0.08),
+    0 0 0 1px rgba(254, 0, 221, 0.08);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(254, 0, 221, 0.1);
+  text-align: center;
+}
+
+.contact-calendly-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(254, 0, 221, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.contact-calendly__title {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, #fe00dd 0%, #FF1493 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Georgia', serif;
+  letter-spacing: -0.5px;
+  display: inline-block;
+}
+
+.contact-calendly__subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.calendly-widget-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(254, 0, 221, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+  background: #ffffff;
+}
+
+#calendly-inline-container {
+  width: 100%;
+  height: 700px;
+  min-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .contact-calendly-card {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    border-radius: 20px;
+  }
+  
+  .contact-calendly__subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  #calendly-inline-container {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-calendly-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+  }
+
+  #calendly-inline-container {
+    height: 550px;
+  }
+}
