@@ -16,25 +16,25 @@ const Blogs = () => {
     {
       title: "The Enterprise ROI & Framework Series",
       description: "Discover strategic framework models and return on investment benchmarks that justify and optimize enterprise event allocations.",
-      url: "/blog/the_enterprise_ROI_series",
+      url: "/blog/the-enterprise-ROI-series",
       icon: faChartLine
     },
     {
       title: "Borderless Logistics & Scale",
       description: "Navigate global operations and cross-border vendor ecosystems with flawless execution, ensuring scale without friction.",
-      url: "/blog/borderless_logistics",
+      url: "/blog/borderless-logistics",
       icon: faGlobe
     },
     {
       title: "Risk Mitigation",
       description: "Analyze event vulnerabilities, build bulletproof fallback architectures, and secure logistics to maintain operational integrity.",
-      url: "/blog/risk_mitigation",
+      url: "/blog/risk-mitigation",
       icon: faShieldHalved
     },
     {
       title: "Enterprise Procurement & Budget Optimization",
       description: "Optimize corporate event budgets using targeted vendor negotiations, clear metrics, and robust procurement alignments.",
-      url: "/blog/enterprise_procurement_&_budget_optimization",
+      url: "/blog/enterprise-procurement-&-budget-optimization",
       icon: faFileInvoiceDollar
     }
   ];

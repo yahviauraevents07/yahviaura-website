@@ -276,9 +276,9 @@
   line-height: 1.4;
   margin-bottom: 1rem;
   font-family: var(--font-family-heading);
-  min-height: 3.8rem;
+  min-height: 5.6rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

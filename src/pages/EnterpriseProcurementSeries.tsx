@@ -4,23 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faBookOpen, faCalendar, faClock, faUser } from '@fortawesome/free-solid-svg-icons';
 import './EnterpriseROISeries.css';
 
-const EnterpriseROISeries = () => {
+const EnterpriseProcurementSeries = () => {
   const articles = [
     {
-      title: "Blending the 5 P's and 7 P's into The Aura Resonance Framework",
-      preview: "In the global enterprise landscape, executing a corporate event is a multi-million dollar variable. Learn how traditional frameworks fall short in modern, high-stakes global execution, and discover our unified delivery system: The Aura Resonance Framework.",
-      url: "/blog/the-enterprise-roi-series/blending-5ps-7ps-into-aura-resonance-framework",
-      date: "June 19, 2026",
-      readTime: "3 min read",
-      keywords: ["Corporate MICE", "Event Planning Frameworks", "Event ROI", "The Aura Resonance Framework"]
-    },
-    {
-      title: "Full-Service Event Planner vs. Day-Of Coordinator: Which One Do You Need?",
-      preview: "There is a terrifying operational illusion quietly built into modern corporate event procurement. Let's analyze if day-of coordination is a myth at an enterprise scale and how strategic architecture dictates outcome.",
-      url: "/blog/the-enterprise-roi-series/full-service-event-planner-vs-day-of-coordinator",
-      date: "June 25, 2026",
-      readTime: "3 min read",
-      keywords: ["Full-service event planner", "Day-of event coordinator", "Corporate MICE execution", "Experiential event management", "The Aura Resonance Framework", "Event risk mitigation"]
+      title: "The Enterprise Guide to Forecasting Budgets and Eliminating Hidden Costs in Global MICE",
+      preview: "In high-stakes Corporate MICE procurement, catastrophic budget overruns are rarely caused by massive, obvious line items. Instead, they are the result of a silent, invisible operational bleed. Learn how to protect your corporate capital.",
+      url: "/blog/enterprise-procurement-&-budget-optimization/the-enterprise-guide-to-forecasting-budgets-and-eliminating-hidden-costs-in-global-mice",
+      date: "June 23, 2026",
+      readTime: "4 min read",
+      keywords: ["Corporate MICE", "Event Budget Forecasting", "Hidden Costs in Event Planning", "The Aura Resonance Framework", "Corporate event overheads", "Event compliance liability", "Global event logistics"]
     }
   ];
 
@@ -45,7 +37,7 @@ const EnterpriseROISeries = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            The Enterprise <span className="text-gradient">ROI & Framework Series</span>
+            Enterprise <span className="text-gradient">Procurement & Budget Optimization</span>
           </motion.h1>
           <motion.p 
             className="roi-series__subtitle"
@@ -53,7 +45,7 @@ const EnterpriseROISeries = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Data-backed planning metrics, cost optimization structures, and proprietary methodologies that align procurement compliance with unforgettable human resonance.
+            Strategic financial metrics, localized vendor optimization, and procurement compliance pipelines.
           </motion.p>
         </div>
       </section>
@@ -105,4 +97,4 @@ const EnterpriseROISeries = () => {
   );
 };
 
-export default EnterpriseROISeries;
+export default EnterpriseProcurementSeries;

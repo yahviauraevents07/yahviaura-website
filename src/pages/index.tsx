@@ -12,6 +12,8 @@ export { default as EnterpriseROISeries } from './EnterpriseROISeries';
 export { default as ComingSoonSeries } from './ComingSoonSeries';
 export { default as AuraResonanceArticle } from './AuraResonanceArticle';
 export { default as EnterpriseGuideBudgetsArticle } from './EnterpriseGuideBudgetsArticle';
+export { default as EnterpriseProcurementSeries } from './EnterpriseProcurementSeries';
+export { default as FullServiceEventPlannerArticle } from './FullServiceEventPlannerArticle';
 
 // Placeholder pages for routing (to be implemented)
 export const Portfolio = () => <div style={{ paddingTop: '100px', minHeight: '100vh' }}><h1>Portfolio</h1></div>;

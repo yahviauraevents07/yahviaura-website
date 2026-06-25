@@ -19,12 +19,12 @@ const AuraResonanceArticle = () => {
           <div className="blog-article__breadcrumb">
             <Link to="/blogs">Blogs</Link>
             <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-separator" />
-            <Link to="/blog/the_enterprise_ROI_series">Enterprise ROI & Frameworks</Link>
+            <Link to="/blog/the-enterprise-ROI-series">Enterprise ROI & Frameworks</Link>
             <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-separator" />
             <span className="breadcrumb-current">The Aura Resonance Framework</span>
           </div>
 
-          <Link to="/blog/the_enterprise_ROI_series" className="blog-article__back">
+          <Link to="/blog/the-enterprise-ROI-series" className="blog-article__back">
             <FontAwesomeIcon icon={faArrowLeft} /> Back to Series
           </Link>
 

@@ -62,12 +62,12 @@ const EnterpriseGuideBudgetsArticle = () => {
           <div className="blog-article__breadcrumb">
             <Link to="/blogs">Blogs</Link>
             <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-separator" />
-            <Link to="/blog/the_enterprise_ROI_series">Enterprise ROI & Frameworks</Link>
+            <Link to="/blog/enterprise-procurement-&-budget-optimization">Procurement & Budget Optimization</Link>
             <FontAwesomeIcon icon={faChevronRight} className="breadcrumb-separator" />
             <span className="breadcrumb-current">The Enterprise Guide to Budgeting</span>
           </div>
 
-          <Link to="/blog/the_enterprise_ROI_series" className="blog-article__back">
+          <Link to="/blog/enterprise-procurement-&-budget-optimization" className="blog-article__back">
             <FontAwesomeIcon icon={faArrowLeft} /> Back to Series
           </Link>
 

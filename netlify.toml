@@ -15,6 +15,36 @@
   status = 200
 
 [[redirects]]
+  from = "/blog/the-enterprise-roi-series/the-enterprise-guide-to-forecasting-budgets-and-eliminating-hidden-costs-in-global-mice"
+  to = "/blog/enterprise-procurement-&-budget-optimization/the-enterprise-guide-to-forecasting-budgets-and-eliminating-hidden-costs-in-global-mice"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/the_enterprise_ROI_series"
+  to = "/blog/the-enterprise-ROI-series"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/borderless_logistics"
+  to = "/blog/borderless-logistics"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/risk_mitigation"
+  to = "/blog/risk-mitigation"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/enterprise_procurement_&_budget_optimization"
+  to = "/blog/enterprise-procurement-&-budget-optimization"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
