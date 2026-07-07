@@ -354,7 +354,7 @@ const Contact = () => {
                   <h4 className="contact-info-social__title">Follow Us</h4>
                   <div className="contact-info-social__links">
                     <a
-                      href="https://www.instagram.com/yahviauraevent/profilecard/?igsh=Nnptd25pNW5ld3N3"
+                      href="https://www.instagram.com/yahviauraevents_/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="contact-info-social__link"
@@ -363,7 +363,7 @@ const Contact = () => {
                       <FontAwesomeIcon icon={faInstagram} />
                     </a>
                     <a
-                      href="https://www.facebook.com/yahviauraevents?mibextid=qi2Omg&rdid=XhdgoYKtNT80HsYH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FFf7gbU9qbHf6pHG6%2F%3Fmibextid%3Dqi2Omg"
+                      href="https://www.facebook.com/profile.php?id=61579548141902"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="contact-info-social__link"

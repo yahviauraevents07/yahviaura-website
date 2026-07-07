@@ -9,8 +9,8 @@ export const APP_CONFIG = {
 } as const;
 
 export const SOCIAL_LINKS = {
-  facebook: '',
-  instagram: '',
+  facebook: 'https://www.facebook.com/profile.php?id=61579548141902',
+  instagram: 'https://www.instagram.com/yahviauraevents_/',
   twitter: '',
   linkedin: '',
   youtube: '',
